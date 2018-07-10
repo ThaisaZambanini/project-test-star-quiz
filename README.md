@@ -3,7 +3,7 @@ Não foi possível finalizar todos os requisitos.
 
 ### Instruções
 
-1. Instalar extenção no chrome para resolver cors;
+1. Instalar extensão no chrome para resolver cors;
 2. Executar os comandos abaixo em sequência:
 	- npm install
 	- gulp deploy
