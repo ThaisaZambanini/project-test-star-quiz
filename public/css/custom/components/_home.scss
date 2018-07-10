@@ -1,0 +1,17 @@
+.home {
+  margin-top: 15%;
+}
+
+.home__img {
+  width: 28rem;
+}
+
+@media (min-width: $screen-md-min) {
+  .home {
+    margin-top: 5%;
+  }
+
+  .home__img {
+    width: 18rem;
+  }
+}

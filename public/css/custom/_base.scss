@@ -1,0 +1,48 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+
+.box--gray {
+  background-color: #F9F9F9;
+  padding: 3% 5%;
+}
+
+.title-starWars {
+  color: #FFF;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+
+.text-shadow--black {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.text-shadow--red {
+  text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
+}
+
+label {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
+input:required {
+  border-left-color: salmon;
+}
+
+@media (min-width: $screen-md-min) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}

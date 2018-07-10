@@ -1,0 +1,149 @@
+<%- contentFor('body') %>
+<div class="game text-center">
+
+  <div class="game__box d-flex align-items-center">
+
+    <div class="p-2">
+      <img class="game__img" src="/images/icon-vader.png" alt="Icon Dath Vader">
+    </div>
+
+    <div class="p-2">
+      <h1 class="title-starWars text-shadow--black">StarQuiz!</h1>
+    </div>
+
+    <div class="ml-auto p-2">
+      <span class="text-right game__timer" id="timer"></span>
+    </div>
+  </div>
+
+  <ul class="card-wars justify-content-between flex-wrap"></ul>
+
+</div>
+
+<!-- Modal Details -->
+<div class="modal fade modal-wars" id="detailsModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailsModalLabel">Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="modal-wars__img" id="imgPersonModal" src="" alt="Image Person">
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <strong>Specie: </strong><span id="specie"></span>
+              </div>
+              <div class="col-md-12">
+                <strong>Height: </strong><span id="height"></span>
+              </div>
+              <div class="col-md-12">
+                <strong>Hair: </strong><span id="hair"></span>
+              </div>
+              <div class="col-md-12">
+                <strong>Planet: </strong><span id="planet"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row margin-top">
+          <div class="col-md-12">
+            <strong>Movies: </strong><span id="movies"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <strong>Vehicles: </strong><span id="vehicles"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal INPUT -->
+<div class="modal fade" id="inputModal" data-id-person="" role="dialog" aria-labelledby="inputeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="inputModalLabel"><strong>Qual a personagem?</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="inputModalResposta">Resposta:</label>
+                <input class="form-control" type="text" autofocus name="inputModalResposta" id="inputModalResposta" value="" placeholder="Digite sua resposta">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <button class="button button--gray" type="button" name="btnResponde" id="btnResponde">ENVIAR</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal FINISH -->
+<div class="modal fade" id="finishModal" role="dialog" aria-labelledby="finishModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="finishModalLabel"><strong>Quiz finalizado!</strong></h5>
+      </div>
+      <div class="modal-body">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <label for=""><span class="modal-wars__pointers" id="pontuacao"></span> pontos</label>
+          </div>
+        </div>
+        <div class="row margin-vertical-2x">
+          <div class="col-md-12">
+            <label>Preencha o form abaixo para salvar sua pontuação!</label>
+          </div>
+        </div>
+        <div id="message" class="margin-vertical-2x modal__msg" style="display: none">Campo 'Nome' é obrigatório!</div>
+        <form>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="name">Nome:</label>
+                <input class="form-control" type="text" name="nameUser" id="nameUser" value="" autofocus placeholder="Digite seu nome" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input class="form-control" type="email" name="emailUser" id="emailUser" value="" placeholder="Digite seu e-mail">
+              </div>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-4">
+            <button class="button button--gray" type="button" name="btnSaveResult" id="btnSaveResult">SALVAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/timer.js"></script>
+<script type="text/javascript" src="/js/paginathing.js"></script>
+<script type="text/javascript" src="/js/game.js"></script>

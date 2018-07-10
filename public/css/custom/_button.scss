@@ -1,0 +1,65 @@
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: none;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif, Helvetica, 'Helvetica Neue';
+  font-size: .9125rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0 0 0.5rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  transition: background-color 250ms ease-out, color 250ms ease-out;
+}
+
+.button:hover, .button:focus {
+  color: $white;
+  text-decoration: none;
+  transition: background-color 250ms ease-out, color 250ms ease-out;
+}
+
+.button--silver {
+  background-color: #736f63;
+  color: $white;
+  &:focus, &:hover, &:active, &:active:hover {
+    background-color: #d0cdc6;
+    color: $white;
+    border-color:#d0cdc6;
+  }
+}
+
+.button.disabled,
+.button[disabled] {
+  background-color: $gray;
+  opacity: .5;
+  pointer-events: none;
+}
+
+.button.disabled:hover,
+.button[disabled]:hover {
+  background-color: $gray;
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.button--gray {
+  background-color: $gray;
+  color: $white;
+  &:focus, &:hover, &:active, &:active:hover {
+    background-color: darken($gray, 10%);
+    color: $white;
+    border-color: darken($gray, 10%);
+  }
+}
+
+.button--small {
+  font-size: 1rem;
+  line-height: 1;
+}
